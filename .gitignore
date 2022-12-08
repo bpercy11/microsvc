@@ -4,6 +4,3 @@ jar/*
 build/*
 logs/*
 *.iml
-# customer/target/
-# fraud/target/
-# eureka-server/target/
