@@ -14,6 +14,9 @@ public class NotificationService {
     private final NotificationRepository notificationRepository;
 
     public void send(NotificationRequest notificationRequest) {
+        // at this point we are just saving this notification to the DB
+        // in theory we would do something like connect to twilio/firebase
+        // to send this notification out to a newly registered customer
         notificationRepository.save(
                 Notification.builder()
                         .toCustomerId(notificationRequest.toCustomerId())
