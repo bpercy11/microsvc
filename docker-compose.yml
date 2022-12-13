@@ -47,7 +47,7 @@ services:
       - spring
 
   eureka-server:
-    image: amigoscode/eureka-server:latest
+    image: bp111/eureka-server:latest
     container_name: eureka-server
     ports:
       - "8761:8761"
@@ -59,7 +59,7 @@ services:
       - zipkin
 
   apigw:
-    image: amigoscode/apigw:latest
+    image: bp111/apigw:latest
     container_name: apigw
     ports:
       - "8083:8083"
@@ -72,7 +72,7 @@ services:
       - eureka-server
 
   customer:
-    image: amigoscode/customer:latest
+    image: bp111/customer:latest
     container_name: customer
     ports:
       - "8080:8080"
@@ -88,7 +88,7 @@ services:
       - rabbitmq
 
   fraud:
-    image: amigoscode/fraud:latest
+    image: bp111/fraud:latest
     container_name: fraud
     ports:
       - "8081:8081"
@@ -104,7 +104,7 @@ services:
       - rabbitmq
 
   notification:
-    image: amigoscode/notification:latest
+    image: bp111/notification:latest
     container_name: notification
     ports:
       - "8082:8082"
