@@ -83,7 +83,6 @@ services:
       - postgres
     depends_on:
       - zipkin
-#      - eureka-server
       - postgres
       - rabbitmq
 
@@ -99,7 +98,6 @@ services:
       - postgres
     depends_on:
       - zipkin
-#      - eureka-server
       - postgres
       - rabbitmq
 
@@ -115,7 +113,6 @@ services:
       - postgres
     depends_on:
       - zipkin
-#      - eureka-server
       - postgres
       - rabbitmq
 

@@ -1,8 +1,11 @@
 apiVersion: v1
-kind: ConfigMap
+kind: Service
 metadata:
-  name: postgres-config
-data:
-  POSTGRES_DB: amigoscode
-  POSTGRES_USER: amigoscode
-  POSTGRES_PASSWORD: password
+  name: postgres
+spec:
+  selector:
+    app: postgres
+  ports:
+    - port: 5432
+      targetPort: 5432
+  type: ClusterIP
